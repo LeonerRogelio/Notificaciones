@@ -1,0 +1,81 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 303
+  ClientWidth = 236
+  Padding.Left = 20.000000000000000000
+  Padding.Top = 20.000000000000000000
+  Padding.Right = 20.000000000000000000
+  Padding.Bottom = 20.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object btnSendNot: TButton
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 30.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Send Notification'
+    OnClick = btnSendNotClick
+  end
+  object btnSendScheduleNot: TButton
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Send Scheduled Notification'
+    OnClick = btnSendScheduleNotClick
+  end
+  object btnCancelSchedule: TButton
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 130.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Cancel Scheduled'
+    OnClick = btnCancelScheduleClick
+  end
+  object btnCancelAll: TButton
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 180.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Cancel All Notifications'
+    OnClick = btnCancelAllClick
+  end
+  object memLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Margins.Top = 10.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 53.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 192.000000000000000000
+    Viewport.Height = 49.000000000000000000
+  end
+  object NotificationCenter: TNotificationCenter
+    OnReceiveLocalNotification = NotificationCenterReceiveLocalNotification
+    Left = 48
+    Top = 216
+  end
+end
